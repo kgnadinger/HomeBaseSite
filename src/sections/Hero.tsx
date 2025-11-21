@@ -61,7 +61,7 @@ export default function Hero() {
               {/* Screen */}
               <div className="w-full h-full bg-background rounded-[2.5rem] overflow-hidden relative">
                 <img
-                  src="/screens/parent-dashboard.png"
+                  src={`${import.meta.env.BASE_URL}screens/parent-dashboard.png`}
                   alt="HomeBase Parent Dashboard"
                   className="w-full h-full object-cover"
                 />

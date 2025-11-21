@@ -6,24 +6,30 @@ interface Screenshot {
   alt: string
 }
 
+// Helper to get image path with base URL
+const getImagePath = (path: string) => {
+  const base = import.meta.env.BASE_URL
+  return `${base}${path.startsWith('/') ? path.slice(1) : path}`
+}
+
 const screenshots: Screenshot[] = [
   {
-    image: '/screens/parent-dashboard.png',
+    image: getImagePath('/screens/parent-dashboard.png'),
     caption: 'Parent Dashboard',
     alt: 'HomeBase parent dashboard with chore management',
   },
   {
-    image: '/screens/create-chore.png',
+    image: getImagePath('/screens/create-chore.png'),
     caption: 'Create Chores',
     alt: 'HomeBase create chore screen',
   },
   {
-    image: '/screens/child-dashboard.png',
+    image: getImagePath('/screens/child-dashboard.png'),
     caption: 'Child Dashboard',
     alt: 'HomeBase child dashboard showing assigned chores',
   },
   {
-    image: '/screens/review-queue.png',
+    image: getImagePath('/screens/review-queue.png'),
     caption: 'Review Queue',
     alt: 'HomeBase review queue for approving completed chores',
   },
