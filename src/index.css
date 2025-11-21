@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* CSS Reset */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    -moz-tab-size: 4;
+    tab-size: 4;
+  }
+
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.5;
+  }
+
+  /* Typography Scale */
+  h1 {
+    @apply text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight;
+  }
+
+  h2 {
+    @apply text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight;
+  }
+
+  h3 {
+    @apply text-2xl sm:text-3xl lg:text-4xl font-semibold leading-snug;
+  }
+
+  p {
+    @apply text-base sm:text-lg leading-relaxed;
+  }
+}
+
+:root {
+  /* Primary Color Palette */
+  --color-primary: #2563eb;
+  --color-primary-dark: #1d4ed8;
+  --color-primary-light: #3b82f6;
+  --color-secondary: #10b981;
+  --color-accent: #f59e0b;
+  
+  /* Neutral Colors */
+  --color-background: #ffffff;
+  --color-foreground: #1f2937;
+  --color-muted: #6b7280;
+  --color-border: #e5e7eb;
+  
+  /* Semantic Colors */
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #111827;
+    --color-foreground: #f9fafb;
+    --color-muted: #9ca3af;
+    --color-border: #374151;
+  }
+}
+
+body {
+  color: var(--color-foreground);
+  background-color: var(--color-background);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
