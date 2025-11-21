@@ -53,35 +53,18 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Visual Element - Phone Mockup Placeholder */}
+        {/* Visual Element - Phone Mockup with Screenshot */}
         <div className="flex justify-center lg:justify-end">
           <div className="relative">
             {/* Phone Frame */}
             <div className="w-64 sm:w-80 lg:w-96 aspect-[9/19.5] bg-gray-900 rounded-[3rem] p-2 shadow-2xl">
               {/* Screen */}
-              <div className="w-full h-full bg-gradient-to-br from-primary/20 to-secondary/20 rounded-[2.5rem] overflow-hidden relative">
-                {/* Status Bar */}
-                <div className="h-12 bg-black/20 flex items-center justify-between px-6 text-white text-xs">
-                  <span>9:41</span>
-                  <div className="flex gap-1">
-                    <div className="w-1 h-1 bg-white rounded-full"></div>
-                    <div className="w-1 h-1 bg-white rounded-full"></div>
-                    <div className="w-1 h-1 bg-white rounded-full"></div>
-                  </div>
-                </div>
-                
-                {/* App Content Placeholder */}
-                <div className="p-6 h-[calc(100%-3rem)] flex flex-col items-center justify-center text-white">
-                  <div className="w-20 h-20 bg-white/20 rounded-2xl mb-4 flex items-center justify-center">
-                    <svg className="w-12 h-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                    </svg>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-2xl font-bold mb-2">HomeBase</div>
-                    <div className="text-sm opacity-75">Screenshot Preview</div>
-                  </div>
-                </div>
+              <div className="w-full h-full bg-background rounded-[2.5rem] overflow-hidden relative">
+                <img
+                  src="/screens/parent-dashboard.png"
+                  alt="HomeBase Parent Dashboard"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
             

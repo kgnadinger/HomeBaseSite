@@ -8,11 +8,6 @@ interface Screenshot {
 
 const screenshots: Screenshot[] = [
   {
-    image: '/screens/onboarding.png',
-    caption: 'Easy Onboarding',
-    alt: 'HomeBase onboarding screen showing family setup',
-  },
-  {
     image: '/screens/parent-dashboard.png',
     caption: 'Parent Dashboard',
     alt: 'HomeBase parent dashboard with chore management',
@@ -26,6 +21,11 @@ const screenshots: Screenshot[] = [
     image: '/screens/child-dashboard.png',
     caption: 'Child Dashboard',
     alt: 'HomeBase child dashboard showing assigned chores',
+  },
+  {
+    image: '/screens/review-queue.png',
+    caption: 'Review Queue',
+    alt: 'HomeBase review queue for approving completed chores',
   },
 ]
 
@@ -74,10 +74,6 @@ export default function Screens() {
         {screenshots.map((screenshot, index) => (
           <ScreenshotCard key={index} screenshot={screenshot} index={index} />
         ))}
-      </div>
-
-      <div className="mt-8 text-center text-sm text-muted">
-        <p>Add your screenshots to <code className="bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">public/screens/</code> directory</p>
       </div>
     </section>
   )
