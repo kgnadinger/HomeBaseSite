@@ -15,11 +15,6 @@ const legalLinks: LegalLink[] = [
     href: 'https://kgnadinger.github.io/homebase-privacy-policy/', // Placeholder - update when EULA is available
     external: true,
   },
-  {
-    label: 'Support',
-    href: 'mailto:kgnadinger@gmail.com',
-    external: false,
-  },
 ]
 
 export default function LegalLinks() {
